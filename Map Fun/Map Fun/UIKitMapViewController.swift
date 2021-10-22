@@ -8,11 +8,21 @@
 import UIKit
 
 class UIKitMapViewController: UIViewController {
-
+  // MARK: - Properties
+// Outlets
+  @IBOutlet weak var recordButton: UIButton!
+  @IBOutlet weak var mapView: UIKitMapView!
+  
+  // Actions
+  @IBAction func recordButtonTapped(_ sender: UIButton) {
+    
+  }
+  
+  
+// MARK: - View
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 
@@ -27,3 +37,6 @@ class UIKitMapViewController: UIViewController {
     */
 
 }
+
+
+

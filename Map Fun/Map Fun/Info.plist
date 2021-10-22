@@ -3,7 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Map Fun allows you to record your journeys.</string>
+	<string>Your precise location is used to record your journeys.</string>
+	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
+	<dict>
+		<key>LocationAccuracyAuthorizationDescription</key>
+		<string>Please enable precise location for the most accurate recording of your path.</string>
+	</dict>
 	<key>MBXAccessToken</key>
 	<string>pk.eyJ1IjoiY3J5c3RhbGsiLCJhIjoiY2t2MmN1aXNiMGZhdjMwcXBqZ2ZhdWZveiJ9.gcln_rzBgW6Tj-508UHlDw</string>
 	<key>UIApplicationSceneManifest</key>
