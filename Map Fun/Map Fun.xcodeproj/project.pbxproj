@@ -15,6 +15,7 @@
 		BA1E9BFC2722E1EA000A95F9 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E9BFB2722E1EA000A95F9 /* OptionsViewController.swift */; };
 		BA1E9BFE2722E209000A95F9 /* UIKitMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E9BFD2722E209000A95F9 /* UIKitMapViewController.swift */; };
 		BA1E9C002722E2A3000A95F9 /* SwiftUIMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E9BFF2722E2A3000A95F9 /* SwiftUIMap.swift */; };
+		BA1E9C032722EEE4000A95F9 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = BA1E9C022722EEE4000A95F9 /* MapboxMaps */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA1E9C032722EEE4000A95F9 /* MapboxMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = "Map Fun";
+			packageProductDependencies = (
+				BA1E9C022722EEE4000A95F9 /* MapboxMaps */,
+			);
 			productName = "Map Fun";
 			productReference = BA1E9BE42722DC60000A95F9 /* Map Fun.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +122,9 @@
 				Base,
 			);
 			mainGroup = BA1E9BDB2722DC60000A95F9;
+			packageReferences = (
+				BA1E9C012722EEE4000A95F9 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+			);
 			productRefGroup = BA1E9BE52722DC60000A95F9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -374,6 +382,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA1E9C012722EEE4000A95F9 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BA1E9C022722EEE4000A95F9 /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA1E9C012722EEE4000A95F9 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BA1E9BDC2722DC60000A95F9 /* Project object */;
 }
