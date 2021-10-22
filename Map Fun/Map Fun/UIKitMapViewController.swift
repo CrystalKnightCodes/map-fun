@@ -15,9 +15,14 @@ class UIKitMapViewController: UIViewController {
   
   // Actions
   @IBAction func recordButtonTapped(_ sender: UIButton) {
-    
+    mapView.isRecording.toggle()
+    mapView.recordRoute()
+    setImage()
   }
   
+  @IBAction func deleteRouteTapped(_ sender: UIBarButtonItem) {
+    mapView.deleteRoute()
+  }
   
 // MARK: - View
     override func viewDidLoad() {
@@ -35,7 +40,13 @@ class UIKitMapViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+ func setImage() {
+   if mapView.isRecording {
+     recordButton.setImage(UIImage(systemName: "pause.circle"), for: .normal)
+   } else {
+     recordButton.setImage(UIImage(systemName: "record.circle"), for: .normal)
+   }
+  }
 }
 
 
