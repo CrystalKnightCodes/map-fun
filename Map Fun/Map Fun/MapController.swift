@@ -50,9 +50,6 @@ class MapController: ObservableObject {
     }
   }
   
-  // SwiftUI initializer will reset frame based on screen sized, so default value is used.
-
-  
   deinit {
     timer?.invalidate()
     timer = nil
