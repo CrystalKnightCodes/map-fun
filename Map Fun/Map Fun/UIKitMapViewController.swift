@@ -9,43 +9,33 @@ import UIKit
 
 class UIKitMapViewController: UIViewController {
   // MARK: - Properties
-// Outlets
+  // Outlets
   @IBOutlet weak var recordButton: UIButton!
   @IBOutlet weak var mapView: UIKitMapView!
   
   // Actions
   @IBAction func recordButtonTapped(_ sender: UIButton) {
-    mapView.isRecording.toggle()
-    mapView.recordRoute()
+    mapView.mapController.isRecording.toggle()
+    mapView.mapController.recordRoute()
     setImage()
   }
   
-  @IBAction func deleteRouteTapped(_ sender: UIBarButtonItem) {
-    mapView.deleteRoute()
+  @IBAction func deleteRouteTapped(_ sender: UIButton) {
+    mapView.mapController.deleteRoute()
   }
   
-// MARK: - View
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+  // MARK: - View
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  // MARK: - Methods
+  func setImage() {
+    if mapView.mapController.isRecording {
+      recordButton.setImage(UIImage(systemName: "pause.circle"), for: .normal)
+    } else {
+      recordButton.setImage(UIImage(systemName: "record.circle"), for: .normal)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
- func setImage() {
-   if mapView.isRecording {
-     recordButton.setImage(UIImage(systemName: "pause.circle"), for: .normal)
-   } else {
-     recordButton.setImage(UIImage(systemName: "record.circle"), for: .normal)
-   }
   }
 }
 

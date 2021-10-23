@@ -14,9 +14,12 @@
 		BA1E9BF42722DC62000A95F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1E9BF22722DC62000A95F9 /* LaunchScreen.storyboard */; };
 		BA1E9BFC2722E1EA000A95F9 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E9BFB2722E1EA000A95F9 /* OptionsViewController.swift */; };
 		BA1E9BFE2722E209000A95F9 /* UIKitMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E9BFD2722E209000A95F9 /* UIKitMapViewController.swift */; };
-		BA1E9C002722E2A3000A95F9 /* SwiftUIMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E9BFF2722E2A3000A95F9 /* SwiftUIMap.swift */; };
+		BA1E9C002722E2A3000A95F9 /* SwiftUIMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E9BFF2722E2A3000A95F9 /* SwiftUIMapView.swift */; };
 		BA1E9C032722EEE4000A95F9 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = BA1E9C022722EEE4000A95F9 /* MapboxMaps */; };
 		BA1E9C052722F761000A95F9 /* UIKitMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E9C042722F761000A95F9 /* UIKitMapView.swift */; };
+		BA1E9C0727232B4C000A95F9 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E9C0627232B4B000A95F9 /* String+.swift */; };
+		BA1E9C09272338E3000A95F9 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E9C08272338E3000A95F9 /* MapController.swift */; };
+		BA1E9C0F27243F21000A95F9 /* SwiftUIMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E9C0E27243F21000A95F9 /* SwiftUIMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +32,11 @@
 		BA1E9BF52722DC62000A95F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA1E9BFB2722E1EA000A95F9 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		BA1E9BFD2722E209000A95F9 /* UIKitMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitMapViewController.swift; sourceTree = "<group>"; };
-		BA1E9BFF2722E2A3000A95F9 /* SwiftUIMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMap.swift; sourceTree = "<group>"; };
+		BA1E9BFF2722E2A3000A95F9 /* SwiftUIMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMapView.swift; sourceTree = "<group>"; };
 		BA1E9C042722F761000A95F9 /* UIKitMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitMapView.swift; sourceTree = "<group>"; };
+		BA1E9C0627232B4B000A95F9 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		BA1E9C08272338E3000A95F9 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		BA1E9C0E27243F21000A95F9 /* SwiftUIMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +76,10 @@
 				BA1E9BFB2722E1EA000A95F9 /* OptionsViewController.swift */,
 				BA1E9BFD2722E209000A95F9 /* UIKitMapViewController.swift */,
 				BA1E9C042722F761000A95F9 /* UIKitMapView.swift */,
-				BA1E9BFF2722E2A3000A95F9 /* SwiftUIMap.swift */,
+				BA1E9BFF2722E2A3000A95F9 /* SwiftUIMapView.swift */,
+				BA1E9C0E27243F21000A95F9 /* SwiftUIMap.swift */,
+				BA1E9C0627232B4B000A95F9 /* String+.swift */,
+				BA1E9C08272338E3000A95F9 /* MapController.swift */,
 				BA1E9BF02722DC62000A95F9 /* Assets.xcassets */,
 				BA1E9BF22722DC62000A95F9 /* LaunchScreen.storyboard */,
 				BA1E9BF52722DC62000A95F9 /* Info.plist */,
@@ -155,12 +164,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA1E9C09272338E3000A95F9 /* MapController.swift in Sources */,
+				BA1E9C0F27243F21000A95F9 /* SwiftUIMap.swift in Sources */,
 				BA1E9C052722F761000A95F9 /* UIKitMapView.swift in Sources */,
 				BA1E9BFC2722E1EA000A95F9 /* OptionsViewController.swift in Sources */,
 				BA1E9BE82722DC60000A95F9 /* AppDelegate.swift in Sources */,
 				BA1E9BFE2722E209000A95F9 /* UIKitMapViewController.swift in Sources */,
 				BA1E9BEA2722DC60000A95F9 /* SceneDelegate.swift in Sources */,
-				BA1E9C002722E2A3000A95F9 /* SwiftUIMap.swift in Sources */,
+				BA1E9C0727232B4C000A95F9 /* String+.swift in Sources */,
+				BA1E9C002722E2A3000A95F9 /* SwiftUIMapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,24 +6,26 @@
 //
 
 import UIKit
+import SwiftUI
 
 class OptionsViewController: UIViewController {
+  // MARK: - Properties
+  // Actions
+  @IBAction func swiftUIButtonTapped(_ sender: UIButton) {
+    presentSwiftUIMap()
+  }
+  
+  // MARK: - View
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  // MARK: - Navigation
+  func presentSwiftUIMap() {
+    let swiftUIMap = SwiftUIMapView()
+    let hostingController = UIHostingController(rootView: swiftUIMap)
+    hostingController.title = "SwiftUI Map"
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    show(hostingController, sender: self)
+  }
 }

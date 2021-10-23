@@ -13,7 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="xs2-AA-uHu">
             <objects>
-                <navigationController id="FwJ-fE-7lp" sceneMemberID="viewController">
+                <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" id="FwJ-fE-7lp" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Tf5-e2-v6X">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -29,7 +29,7 @@
         <!--Map Options-->
         <scene sceneID="abP-ot-mE9">
             <objects>
-                <viewController id="8XZ-JY-IIN" customClass="OptionsViewController" customModule="Map_Fun" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="8XZ-JY-IIN" customClass="OptionsViewController" customModule="Map_Fun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kdy-Hb-tQG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,6 +49,9 @@
                                         <rect key="frame" x="126" y="51" width="122.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="SwiftUI Version"/>
+                                        <connections>
+                                            <action selector="swiftUIButtonTapped:" destination="8XZ-JY-IIN" eventType="touchUpInside" id="TBR-TY-7e7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -65,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IbD-XU-BC2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-41" y="35"/>
+            <point key="canvasLocation" x="-101" y="35"/>
         </scene>
         <!--UIKit Map-->
         <scene sceneID="Ux7-R4-KWz">
@@ -82,7 +85,7 @@
                                     <constraint firstAttribute="width" secondItem="9Q0-a4-G2L" secondAttribute="height" multiplier="1:1" id="oWc-PY-Mia"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="Record Route" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xL-MV-f3M">
+                            <button toolTip="Record Route" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xL-MV-f3M">
                                 <rect key="frame" x="168" y="554" width="78" height="51"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=" ">
@@ -95,25 +98,37 @@
                                     <action selector="recordButtonTapped:" destination="i7k-gg-YRv" eventType="touchUpInside" id="7Gp-We-YlA"/>
                                 </connections>
                             </button>
+                            <button toolTip="Record Route" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndc-Rb-Zie">
+                                <rect key="frame" x="331" y="554" width="63" height="51"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=" ">
+                                    <imageReference key="image" image="trash" catalog="system" symbolScale="medium"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large" weight="light">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    </preferredSymbolConfiguration>
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteRouteTapped:" destination="i7k-gg-YRv" eventType="touchUpInside" id="j3K-ri-C30"/>
+                                    <action selector="recordButtonTapped:" destination="i7k-gg-YRv" eventType="touchUpInside" id="6BN-XR-zl6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NYi-XB-U9c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9Q0-a4-G2L" firstAttribute="top" secondItem="NYi-XB-U9c" secondAttribute="top" constant="20" id="KXh-7p-ebk"/>
                             <constraint firstItem="6xL-MV-f3M" firstAttribute="centerX" secondItem="88L-qy-obE" secondAttribute="centerX" id="SU4-El-hLe"/>
+                            <constraint firstItem="NYi-XB-U9c" firstAttribute="trailing" secondItem="ndc-Rb-Zie" secondAttribute="trailing" constant="20" id="hra-vM-5XN"/>
                             <constraint firstItem="6xL-MV-f3M" firstAttribute="top" secondItem="9Q0-a4-G2L" secondAttribute="bottom" constant="20" id="ird-n5-2Uy"/>
                             <constraint firstItem="NYi-XB-U9c" firstAttribute="trailing" secondItem="9Q0-a4-G2L" secondAttribute="trailing" constant="20" id="lym-oj-QWL"/>
+                            <constraint firstItem="ndc-Rb-Zie" firstAttribute="top" secondItem="9Q0-a4-G2L" secondAttribute="bottom" constant="20" id="nUm-TG-ysF"/>
                             <constraint firstItem="9Q0-a4-G2L" firstAttribute="leading" secondItem="NYi-XB-U9c" secondAttribute="leading" constant="20" id="xcN-IR-i2Y"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="UIKit Map" id="IWU-tl-cg2">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="sRS-d2-jiN">
-                            <color key="tintColor" systemColor="systemRedColor"/>
-                            <connections>
-                                <action selector="deleteRouteTapped:" destination="i7k-gg-YRv" id="RjP-9j-eqq"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="UIKit Map" id="IWU-tl-cg2"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="9Q0-a4-G2L" id="qpU-bp-PG4"/>
                         <outlet property="recordButton" destination="6xL-MV-f3M" id="Unw-RV-AXJ"/>
@@ -126,6 +141,7 @@
     </scenes>
     <resources>
         <image name="record.circle" catalog="system" width="128" height="121"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
