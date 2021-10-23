@@ -11,7 +11,7 @@ import MapboxMaps
 
 struct SwiftUIMapView: View {
   // MARK: - Properties
-  @State private var mapController = MapController(frame: .zero)
+  @State private var mapController = MapController()
   @State private var camera = Camera(
     center: CLLocationCoordinate2D(latitude: 35, longitude: 35),
     zoom: 15
@@ -22,12 +22,10 @@ struct SwiftUIMapView: View {
   // MARK: - View
   // Main
   var body: some View {
-    NavigationView {
-      content  // Because view is coming from UIKit, it uses the UIKit Navigation Bar
-        .navigationBarHidden(true)
+      content
+      .background(Color("lightGreen").ignoresSafeArea())
         .onDisappear {
           mapController.timer?.invalidate()
-        }
     }
   }
   

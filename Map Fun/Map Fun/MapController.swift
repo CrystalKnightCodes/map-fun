@@ -34,7 +34,9 @@ class MapController: ObservableObject {
   )
   
   // Initialization
-  init(frame: CGRect) {
+  // UIKit initializer passes in frame to conform to view.bounds
+  // SwiftUI initializer will reset frame based on screen size, so default value is used.
+  init(frame: CGRect = CGRect(x: 0, y: 0, width: 64, height: 64)) {
     mapView = MapView(frame: frame, mapInitOptions: mapInitOptions)
     mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     
@@ -47,6 +49,9 @@ class MapController: ObservableObject {
       self.mapView.location.addLocationConsumer(newConsumer: self.cameraLocationConsumer)
     }
   }
+  
+  // SwiftUI initializer will reset frame based on screen sized, so default value is used.
+
   
   deinit {
     timer?.invalidate()
