@@ -70,21 +70,53 @@
 		BA1E9BE62722DC60000A95F9 /* Map Fun */ = {
 			isa = PBXGroup;
 			children = (
-				BA1E9BE72722DC60000A95F9 /* AppDelegate.swift */,
-				BA1E9BE92722DC60000A95F9 /* SceneDelegate.swift */,
-				BA1E9BED2722DC60000A95F9 /* Main.storyboard */,
-				BA1E9BFB2722E1EA000A95F9 /* OptionsViewController.swift */,
-				BA1E9BFD2722E209000A95F9 /* UIKitMapViewController.swift */,
-				BA1E9C042722F761000A95F9 /* UIKitMapView.swift */,
-				BA1E9BFF2722E2A3000A95F9 /* SwiftUIMapView.swift */,
-				BA1E9C0E27243F21000A95F9 /* SwiftUIMap.swift */,
-				BA1E9C0627232B4B000A95F9 /* String+.swift */,
-				BA1E9C08272338E3000A95F9 /* MapController.swift */,
-				BA1E9BF02722DC62000A95F9 /* Assets.xcassets */,
-				BA1E9BF22722DC62000A95F9 /* LaunchScreen.storyboard */,
+				BAEC42772724571A008E7533 /* App */,
+				BAEC42782724573C008E7533 /* View Controllers */,
+				BAEC427927245766008E7533 /* Maps */,
+				BAEC427A2724578A008E7533 /* Helpers */,
 				BA1E9BF52722DC62000A95F9 /* Info.plist */,
 			);
 			path = "Map Fun";
+			sourceTree = "<group>";
+		};
+		BAEC42772724571A008E7533 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BA1E9BE72722DC60000A95F9 /* AppDelegate.swift */,
+				BA1E9BE92722DC60000A95F9 /* SceneDelegate.swift */,
+				BA1E9BED2722DC60000A95F9 /* Main.storyboard */,
+				BA1E9BF22722DC62000A95F9 /* LaunchScreen.storyboard */,
+				BA1E9BF02722DC62000A95F9 /* Assets.xcassets */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		BAEC42782724573C008E7533 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA1E9BFB2722E1EA000A95F9 /* OptionsViewController.swift */,
+				BA1E9BFD2722E209000A95F9 /* UIKitMapViewController.swift */,
+				BA1E9BFF2722E2A3000A95F9 /* SwiftUIMapView.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BAEC427927245766008E7533 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				BA1E9C042722F761000A95F9 /* UIKitMapView.swift */,
+				BA1E9C0E27243F21000A95F9 /* SwiftUIMap.swift */,
+				BA1E9C08272338E3000A95F9 /* MapController.swift */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		BAEC427A2724578A008E7533 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BA1E9C0627232B4B000A95F9 /* String+.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
